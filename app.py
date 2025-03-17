@@ -74,3 +74,6 @@ cm = confusion_matrix(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
+from sklearn.model_selection import GridSearchCV
+param_grid = {'C': [0.01, 0.1, 1, 10], 'solver': ['lbfgs', 'liblinear']}
+grid = GridSearchCV(LogisticRegression(), param_grid, cv=5).fit(X_train, y_train)
