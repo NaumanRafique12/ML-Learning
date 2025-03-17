@@ -23,6 +23,3 @@ df_info = df.info()
 df_description = df.describe()
 df_shape = df.shape
 df_duplicated = df.duplicated().sum()
-
-
-
